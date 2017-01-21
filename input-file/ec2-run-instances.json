@@ -1,0 +1,28 @@
+{
+    "DryRun": false,
+    "ImageId": "AMI_ID",
+    "KeyName": "KEYNAME",
+
+    "UserData": "delete-bucket-from-s3-script.sh",
+    "InstanceType": "INSTANCE_TYPE",
+    "Placement": {
+      "Tenancy": "default",
+      "AvailabilityZone": "AZ"
+    },
+    "Monitoring": {
+        "Enabled": true
+    },
+    "SubnetId": "SUBNET_ID",
+    "SecurityGroupIds": [
+            "SG_ID"
+    ],
+    "NetworkInterfaces": [
+        {
+            "DeviceIndex": 0, 
+            "DeleteOnTermination": true,
+            "AssociatePublicIpAddress": true
+        }
+    ],
+    "DisableApiTermination": false,
+    "EbsOptimized": false
+}
